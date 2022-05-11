@@ -83,20 +83,102 @@
     //     //this will log because || stands for or if this is true
     // }
 
-    var cat1 = 5;
-    var cat2 = 10;
-    var cat3 = 1;
-    var cat3disabledHandicap = false;
+//     var cat1 = 5;
+//     var cat2 = 10;
+//     var cat3 = 1;
+//     var cat3disabledHandicap = false;
 
-    if (cat1 > cat2 && cat1 > cat3 && !cat3disabledHandicap) {
-        console.log("Cat 1 is cutest");
-    } else if (cat2 > cat1 && cat2 > cat3 && !cat3disabledHandicap) {
-         console.log("cat2 is the cutest");
-    } else if (cat3 > cat1 && cat3 > cat2 || cat3disabledHandicap) {
-        console.log("cat3 is cutest");
-    }
+//     if (cat1 > cat2 && cat1 > cat3 && !cat3disabledHandicap) {
+//         console.log("Cat 1 is cutest");
+//     } else if (cat2 > cat1 && cat2 > cat3 && !cat3disabledHandicap) {
+//          console.log("cat2 is the cutest");
+//     } else if (cat3 > cat1 && cat3 > cat2 || cat3disabledHandicap) {
+//         console.log("cat3 is cutest");
+//     }
 
 // new lesson - Arrays
+
+    // var students = ["Timmy", "Janessa", "Arun"];
+
+    // var naughtyList = [];
+
+    // naughtyList.push(students[0]);
+
+    // var index = naughtyList.indexOf("Timmy");
+
+    // if (index > -1) {
+    //     naughtyList.splice(index, 1);
+    // }
+
+    // console.log(naughtyList);
+
+//new lesson - Loops
+
+    // var total = 10
+    // for (var x = 0; x < total; x++) {
+    //     console.log(x);
+    //         //x++ is just x = x + 1
+    // }
+
+    // var students = ["john", "jacob", "jingle", "himier", "schmidt"];
+    // for (var index = 0; index < students.length; index++) {
+    //     console.log(students[index]);
+    // }
+
+//new lesson - Functions
+
+    // var length1 = 15; JUNK
+    // var width1 = 10;
+    // var area1 = length1 * width1;
+
+    // var length2 = 12;
+    // var width2 = 14;
+    // var area2 = length2 * width2;
+
+    // console.log(area1);
+    // console.log(area2);
+
+    function area(length, width) {
+        return length * width;
+    }
+
+    var rectanglesAreas = [];
+    rectanglesAreas.push(area(10,15));
+    rectanglesAreas.push(area(14,2));
+    rectanglesAreas.push(area(4,5));
+    console.log(rectanglesAreas);
+
+
+    var bankBalance = 500;
+
+    function makeTransaction(priceOfSale) {
+        if (priceOfSale <= bankBalance) {
+            bankBalance -= priceOfSale;
+            console.log("Purchase Successful");
+        } else {
+            console.log("Insufficient Funds");
+        }
+    }
+
+    console.log(bankBalance);
+    makeTransaction(79.00);
+    console.log(bankBalance);
+    makeTransaction(232);
+    console.log(bankBalance);
+    makeTransaction(1000);
+
+    var transaction = function(priceOfSale) {
+        if (priceOfSale <= bankBalance) {
+            bankBalance -= priceOfSale;
+            console.log("Purchase Successful");
+        } else {
+            console.log("Insufficient Funds");
+        }
+    }
+
+    transaction(10);
+
+
 
    
 
