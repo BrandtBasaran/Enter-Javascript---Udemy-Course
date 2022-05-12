@@ -138,45 +138,130 @@
     // console.log(area1);
     // console.log(area2);
 
-    function area(length, width) {
-        return length * width;
-    }
+//     function area(length, width) {
+//         return length * width;
+//     }
 
-    var rectanglesAreas = [];
-    rectanglesAreas.push(area(10,15));
-    rectanglesAreas.push(area(14,2));
-    rectanglesAreas.push(area(4,5));
-    console.log(rectanglesAreas);
+//     var rectanglesAreas = [];
+//     rectanglesAreas.push(area(10,15));
+//     rectanglesAreas.push(area(14,2));
+//     rectanglesAreas.push(area(4,5));
+//     console.log(rectanglesAreas);
 
 
-    var bankBalance = 500;
+//     var bankBalance = 500;
 
-    function makeTransaction(priceOfSale) {
-        if (priceOfSale <= bankBalance) {
-            bankBalance -= priceOfSale;
-            console.log("Purchase Successful");
-        } else {
-            console.log("Insufficient Funds");
-        }
-    }
+//     function makeTransaction(priceOfSale) {
+//         if (priceOfSale <= bankBalance) {
+//             bankBalance -= priceOfSale;
+//             console.log("Purchase Successful");
+//         } else {
+//             console.log("Insufficient Funds");
+//         }
+//     }
 
-    console.log(bankBalance);
-    makeTransaction(79.00);
-    console.log(bankBalance);
-    makeTransaction(232);
-    console.log(bankBalance);
-    makeTransaction(1000);
+//     console.log(bankBalance);
+//     makeTransaction(79.00);
+//     console.log(bankBalance);
+//     makeTransaction(232);
+//     console.log(bankBalance);
+//     makeTransaction(1000);
 
-    var transaction = function(priceOfSale) {
-        if (priceOfSale <= bankBalance) {
-            bankBalance -= priceOfSale;
-            console.log("Purchase Successful");
-        } else {
-            console.log("Insufficient Funds");
-        }
-    }
+//     var transaction = function(priceOfSale) {
+//         if (priceOfSale <= bankBalance) {
+//             bankBalance -= priceOfSale;
+//             console.log("Purchase Successful");
+//         } else {
+//             console.log("Insufficient Funds");
+//         }
+//     }
 
-    transaction(10);
+//     transaction(10);
+
+//new lesson - Objects
+//best practice for construct inLine
+//------------------------------------------
+    
+    // var students = [];
+
+    // function student(first, last, age) {
+    //     this.firstName = first;
+    //     this.lastName = last;
+    //     this.age = age;
+    //     //establishing 'this' provides scope within the construct
+    //     this.greeting = function() {
+    //         return "Hi, I'm " + this.first + " and I'm " + age + " years old.";
+    //     }
+    // };
+
+    // students.push(new student("jenny", "laga", 5));
+    // students.push(new student("jimmy", "lapper", 6));
+    // students.push(new student("john", "loper", 7));
+    // //we now accomplished the lines below, with one line using a construct built above
+    
+    // //now lets go grab each key using a loop, not best practice but may see it. not very common just in case we see it in the wild
+
+    // for (var key in student) {
+    //     console.log(student[key]);
+    // }
+//--------------------------------------------
+    
+
+    // var student0 = {
+    //     firstName: "Jayne",
+    //     lastName: "Loo",
+    //     age: 8,
+    //     greeting: function() {
+    //         return "Hi, I'm " + this.firstName + " and I'm " + age + " years old.";
+    //     }
+    //     //"this" refers to the properties inside of the object, scope dawg
+    // };
+
+    // console.log(student0.greeting());
+    //---
+    // var student1 = new Object();
+    //     //creates a new empty object 
+    // student1.firstName = "John";
+    // student1.lastName = "Parker";
+    // student1.age = 7;
+    //     //this creates the same variable as above example just a different technique
+    //---
+    // var student2 = {};
+    // student2.firstName = "zack";
+    // student2.lastName = "bobo";
+    // student2.age = 3;
+    //---
+    // var students = [];
+    // students.push(student0);
+    // students.push(student1);
+    // students.push(student2);
+    //---
+    // console.log(students);
+    //     //here we pushed the student information into the array and then logged it, showing age, name, last, etc.
+    
+//new lesson - Bind
+
+    // this.car = "Honda Civic with Ugly Spoiler"
+
+    // var marksGarage = {
+    //     car: "Aston Martin",
+    //     getCar: function() {
+    //         return this.car;
+    //     }
+    // };
+
+    // console.log(marksGarage.getCar());
+
+    // var storeGetCarForLater = marksGarage.getCar;
+    // //here i stored the function for later
+
+    // console.log(storeGetCarForLater());
+    // //this does not work because the function is now referring to "this" outside of the function found above in Alex's car. this is why we need to bind
+
+    // var theRealGetCarFunction = marksGarage.getCar.bind(marksGarage);
+    // //using this var we have re-established scope by binding it to marksGarage 
+    // console.log(theRealGetCarFunction);
+
 
 
 
